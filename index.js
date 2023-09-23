@@ -13,7 +13,7 @@ app.use(express.json())
 // SeY1RO3RHSwnAaea
 // subscribe-plan
 
-const uri = "mongodb+srv://subscribe-plan:SeY1RO3RHSwnAaea@cluster0.cpvrkgd.mongodb.net/?retryWrites=true&w=majority";
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.cpvrkgd.mongodb.net/?retryWrites=true&w=majority`;
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
